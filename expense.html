@@ -35,8 +35,11 @@
         const categoryInput = document.querySelector('#category');
         const msg = document.querySelector('.msg');
         const listOfExpense = document.querySelector('#listofexpense');
+        
         myForm.addEventListener('submit', onSubmit);
-
+            expenseInput.value = '';
+            descriptionInput.value='';
+            categoryInput.value = '';
         function onSubmit(e) {
         e.preventDefault();
         
@@ -58,10 +61,11 @@
 
             localStorage.setItem(inputData.desc,JSON.stringify(inputData));
             showuser(inputData);
-            
+
             expenseInput.value = '';
             descriptionInput.value='';
             categoryInput.value = '';
+            
         }
         }
 
