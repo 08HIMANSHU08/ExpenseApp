@@ -68,6 +68,19 @@
             
         }
         }
+        
+        window.addEventListener("DOMContentLoaded",()=>{
+        const localStorageObj=localStorage;
+        const localStorageKeys=Object.keys(localStorageObj);
+
+        for(let i=0;i<localStorageKeys.length;i++)
+        {
+          const keys=localStorageKeys[i];
+          const expenseDetailsString=localStorageObj[keys];
+          const expenseDetailsObj=JSON.parse(expenseDetailsString);
+          showuser(expenseDetailsObj);
+        }
+      })
 
         function showuser(obj){
         const parentitem=document.getElementById("listofexpense");
