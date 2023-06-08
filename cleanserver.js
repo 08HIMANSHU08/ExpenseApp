@@ -46,6 +46,8 @@ app.post('/add-expense',async(req,res,next)=>{
     // }
 })
 
+
+
 app.get('/get-expense',async(req,res,next)=>{
     // try{
         const users = await User.findAll();
